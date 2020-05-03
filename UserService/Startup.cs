@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using NLog;
 using System.IO;
 using UserService.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace UserService
 {
@@ -34,7 +35,7 @@ namespace UserService
         {
             services.AddControllers();
             services.AddTransient<IuserRepository, UserRepository>();
-            services.AddDbContext<BuyerContext>();
+            services.AddDbContext<BuyerContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("connectionstring")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Big Basket", Version = "v1" });

@@ -32,15 +32,12 @@ namespace UserService.Controllers
             {
                 _logger.LogInformation("user login");
                 Buyer buyer = _repo.BuyerLogin(uname, pwd);
-                if (buyer != null)
-                {
-                    return Ok(buyer);
-                }
+               
                 return Ok(buyer);
             }
             catch (MyAppException e)
             {
-                throw e.InnerException;
+                throw e;
             }
         }
         [HttpPost]
