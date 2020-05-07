@@ -9,14 +9,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using UserService.Models;
-using UserService.Repository;
+using BuyerDB.Entity;
+using BuyerDB.Models;
+using BuyerDB.Repositories;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Logging;
 using NLog;
 using System.IO;
 using UserService.Extensions;
 using Microsoft.EntityFrameworkCore;
+using UserService.Manager;
+
 
 namespace UserService
 {
@@ -33,9 +36,10 @@ namespace UserService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddTransient<IuserRepository, UserRepository>();
-            services.AddDbContext<BuyerContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("connectionstring")));
+           
+            services.AddDbContext<BuyerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connectionstring")));
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserManager, UserManager>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Big Basket", Version = "v1" });
@@ -45,6 +49,7 @@ namespace UserService
                    config.Filters.Add(typeof(CustomExceptionFilter));
                }
            );
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

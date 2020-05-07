@@ -4,6 +4,70 @@
     "H:\\C#\\TestService\\TestService.csproj": {}
   },
   "projects": {
+    "H:\\C#\\BuyerDB\\BuyerDB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\C#\\BuyerDB\\BuyerDB.csproj",
+        "projectName": "BuyerDB",
+        "projectPath": "H:\\C#\\BuyerDB\\BuyerDB.csproj",
+        "packagesPath": "C:\\Users\\karthu\\.nuget\\packages\\",
+        "outputPath": "H:\\C#\\BuyerDB\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\karthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "H:\\C#\\BuyerService\\BuyerService.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +76,93 @@
         "projectPath": "H:\\C#\\BuyerService\\BuyerService.csproj",
         "packagesPath": "C:\\Users\\karthu\\.nuget\\packages\\",
         "outputPath": "H:\\C#\\BuyerService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\karthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Logger.Service": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\C#\\Gateway\\Gateway.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\C#\\Gateway\\Gateway.csproj",
+        "projectName": "Gateway",
+        "projectPath": "H:\\C#\\Gateway\\Gateway.csproj",
+        "packagesPath": "C:\\Users\\karthu\\.nuget\\packages\\",
+        "outputPath": "H:\\C#\\Gateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\karthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,17 +199,9 @@
               "target": "Package",
               "version": "[3.1.3, )"
             },
-            "Microsoft.Extensions.Logging": {
+            "Ocelot": {
               "target": "Package",
-              "version": "[3.1.3, )"
-            },
-            "NLog.Web.AspNetCore": {
-              "target": "Package",
-              "version": "[4.9.2, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.4.0, )"
+              "version": "[15.0.6, )"
             }
           },
           "imports": [
@@ -117,6 +260,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Logger.Service": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.3, )"
@@ -181,8 +332,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "H:\\C#\\BuyerDB\\BuyerDB.csproj": {
+                "projectPath": "H:\\C#\\BuyerDB\\BuyerDB.csproj"
+              },
               "H:\\C#\\BuyerService\\BuyerService.csproj": {
                 "projectPath": "H:\\C#\\BuyerService\\BuyerService.csproj"
+              },
+              "H:\\C#\\Gateway\\Gateway.csproj": {
+                "projectPath": "H:\\C#\\Gateway\\Gateway.csproj"
               },
               "H:\\C#\\ItemService\\ItemService.csproj": {
                 "projectPath": "H:\\C#\\ItemService\\ItemService.csproj"
@@ -202,6 +359,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Logger.Service": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.3, )"
@@ -273,7 +438,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "H:\\C#\\BuyerDB\\BuyerDB.csproj": {
+                "projectPath": "H:\\C#\\BuyerDB\\BuyerDB.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -285,6 +454,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Logger.Service": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.3, )"
